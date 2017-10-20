@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+
+        
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Sympozjum GAP</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+        <div class="block-element">
+           <a href="#" class="link"><h2>Aktualności</h2></a><br>
+           </div>
+                         <div class="block-element">
+                    <a href="#" class="link"><h2>Plan Sympozjum</h2></a><br></div>
+                            <div class="block-element">
+                    <a href="#" class="link"><h2>Kontakt</h2></a><br></div>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><img src="lib/sympozjum-gap.png" width="80%" height="auto">
+                    </div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                        <h1> Aktualności </h1>
+                        <div class="box">
+							<h2>Sebastian Balzam</h2>
+                            <p> Nazywam się Sebastian Balzam. Urodziłem się 17.06.1978 w Sosnowcu. Jestem szczęśliwym mężem i ojcem dwójki wspaniałych dzieci.  Technikum zawodowe ukończyłem z wyróżnieniem. Za osiągnięte wyniki naukowe otrzymałem nagrodę Prezydenta Miasta Będzina. W 1998 rozpocząłem studia dzienne magisterskie na Politechnice Śląskiej […]<br> <a href="zmiana1.html">Czytaj więcej...</a></p>
+						</div>
+                        <div class="box">
+							<h2>Tadeusz Uhl</h2>
+                            <p> W 1974 roku ukończył liceum Ogólnokształcące im. Jana II Sobieskiego w Krakowie, w 1983 roku obronił pracę doktorską w zakresie mechaniki, a w 1990 roku otrzymał tytuł doktora habilitowanego. W 1996 roku otrzymał tytuł profesora w zakresie nauk technicznych. Obecnie jest pracownikiem Katedry Robotyki i […]<br> <a href="zmiana1.html">Czytaj więcej...</a></p>
+						</div>
+                        <div class="box">
+							<h2>Stanisław Speczik</h2>
+                            <p>polski geolog, profesor nauk o Ziemi, były prezes zarządu KGHM Polska Miedź i wiceminister w Ministerstwie Skarbu Państwa. W 1971 ukończył studia na Wydziale Geologii Uniwersytetu Warszawskiego. W 1976 uzyskał stopień naukowy doktora na podstawie pracy zatytułowanej Mineralizacja kruszcowa w […]<br> <a href="zmiana1.html">Czytaj więcej...</a></p>
+						</div>
+                         <div class="box">
+                        <h2>Maciej Chorowski</h2>
+                            <p> Prof. dr hab. inż. Maciej Chorowski , ur. 1958, absolwent Wydziału Mechaniczno-Energetycznego Politechniki Wrocławskiej rocznik 1982, kierunek mechanika, specjalność chłodnictwo i kriogenika.   W latach 1996-1998 pracował w Europejskiej Organizacji Badań Jądrowych CERN, uczestnicząc w projektowaniu systemu kriogenicznego Wielkiego Zderzacza […]<br> <a href="zmiana1.html">Czytaj więcej...</a></p>
+						</div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+           
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <img src="lib/facebook-logo.png" height="40%" width="auto">
+                   <img src="lib/instagram.png" height="40%" width="auto">
+                  <img src="lib/youtube.png" height="40%" width="auto" >
+                    
+                                                 
+                </div>
+            </div>
+     
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
